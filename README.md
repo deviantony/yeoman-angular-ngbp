@@ -12,7 +12,12 @@ $ npm install -g generator-angular-ngbp
 
 # Usage
 
-WIP
+````
+$ yo angular-ngbp [projectName]
+````
+
+The projectName argument is optional.
+The generator will replace it with the name of the working directory if it is not specified.
 
 # Development
 
