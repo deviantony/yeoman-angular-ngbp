@@ -17,9 +17,10 @@ describe('AngularJS project generation', function () {
     this.author = "testAuthor";
   });
 
-  it('creates all required files', function () {
+  it('creates expected files', function () {
     assert.file([
       'package.json',
+      '.gitignore'
     ]);
   });
 

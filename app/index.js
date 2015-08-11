@@ -40,6 +40,12 @@ module.exports = generators.Base.extend({
       this.destinationPath('package.json'),
       context
     );
+
+    this.fs.copyTpl(
+      this.templatePath('.gitignore'),
+      this.destinationPath('.gitignore'),
+      context
+    );
   }
 
 });
