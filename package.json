@@ -1,0 +1,24 @@
+{
+  "name": "generator-angular-ngbp",
+  "version": "0.1.0",
+  "description": "A Yeoman generator for AngularJS projects based on ngBoilerplate.",
+  "repository": "deviantony/yeoman-angular-ngbp",
+  "author": "Anthony Lapenna <lapenna.anthony@gmail.com>",
+  "keywords": [
+    "yeoman-generator",
+    "angularJS"
+  ],
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "yeoman-generator": "^0.20.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "files": [
+    "app"
+  ],
+  "scripts": {
+    "test": "mocha"
+  }
+}
