@@ -47,6 +47,18 @@ module.exports = generators.Base.extend({
       context
     );
 
+    this.fs.copyTpl(
+      this.templatePath('src/app/README.md'),
+      this.destinationPath('src/app/README.md'),
+      context
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('src/README.md'),
+      this.destinationPath('src/README.md'),
+      context
+    );
+
     this.fs.copy(
       this.templatePath('.gitignore'),
       this.destinationPath('.gitignore')
@@ -56,6 +68,22 @@ module.exports = generators.Base.extend({
       this.templatePath('.bowerrc'),
       this.destinationPath('.bowerrc')
     );
+
+    this.fs.copy(
+      this.templatePath('src/assets/README.md'),
+      this.destinationPath('src/assets/README.md')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/common/README.md'),
+      this.destinationPath('src/common/README.md')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/less/README.md'),
+      this.destinationPath('src/less/README.md')
+    );
+
   }
 
 });
