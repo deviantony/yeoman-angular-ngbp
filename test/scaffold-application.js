@@ -21,7 +21,8 @@ describe('AngularJS project generation', function () {
     assert.file([
       'package.json',
       '.gitignore',
-      '.bowerrc'
+      '.bowerrc',
+      'bower.json'
     ]);
   });
 
@@ -31,6 +32,10 @@ describe('AngularJS project generation', function () {
       ['package.json', new RegExp('"name": "' + this.projectName + '"')]
     ];
     assert.fileContent(content);
+  });
+
+  it('fills bower.json with correct information', function () {
+    assert.fileContent('bower.json', new RegExp('"name": "' + this.projectName + '"'));
   });
 
 });
