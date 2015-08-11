@@ -42,21 +42,19 @@ module.exports = generators.Base.extend({
     );
 
     this.fs.copyTpl(
-      this.templatePath('.gitignore'),
-      this.destinationPath('.gitignore'),
-      context
-    );
-
-    this.fs.copyTpl(
-      this.templatePath('.bowerrc'),
-      this.destinationPath('.bowerrc'),
-      context
-    );
-
-    this.fs.copyTpl(
       this.templatePath('bower.json'),
       this.destinationPath('bower.json'),
       context
+    );
+
+    this.fs.copy(
+      this.templatePath('.gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    this.fs.copy(
+      this.templatePath('.bowerrc'),
+      this.destinationPath('.bowerrc')
     );
   }
 
