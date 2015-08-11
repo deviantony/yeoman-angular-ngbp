@@ -20,7 +20,8 @@ describe('AngularJS project generation', function () {
   it('creates expected files', function () {
     assert.file([
       'package.json',
-      '.gitignore'
+      '.gitignore',
+      '.bowerrc'
     ]);
   });
 

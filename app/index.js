@@ -46,6 +46,12 @@ module.exports = generators.Base.extend({
       this.destinationPath('.gitignore'),
       context
     );
+
+    this.fs.copyTpl(
+      this.templatePath('.bowerrc'),
+      this.destinationPath('.bowerrc'),
+      context
+    );
   }
 
 });
