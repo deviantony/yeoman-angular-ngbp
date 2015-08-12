@@ -28,6 +28,11 @@ describe('AngularJS project generation', function () {
       'src/assets/README.md',
       'src/common/README.md',
       'src/less/README.md',
+      'src/app/home/home.js',
+      'src/app/home/home.spec.js',
+      'src/app/home/home.less',
+      'src/app/home/home.tpl.html',
+      'src/app/home/README.md',
     ]);
   });
 

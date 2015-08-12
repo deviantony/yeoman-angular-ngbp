@@ -59,6 +59,30 @@ module.exports = generators.Base.extend({
       context
     );
 
+    this.fs.copyTpl(
+      this.templatePath('src/app/home/README.md'),
+      this.destinationPath('src/app/home/README.md'),
+      context
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('src/app/home/home.tpl.html'),
+      this.destinationPath('src/app/home/home.tpl.html'),
+      context
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('src/app/home/home.js'),
+      this.destinationPath('src/app/home/home.js'),
+      context
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('src/app/home/home.spec.js'),
+      this.destinationPath('src/app/home/home.spec.js'),
+      context
+    );
+
     this.fs.copy(
       this.templatePath('.gitignore'),
       this.destinationPath('.gitignore')
@@ -82,6 +106,11 @@ module.exports = generators.Base.extend({
     this.fs.copy(
       this.templatePath('src/less/README.md'),
       this.destinationPath('src/less/README.md')
+    );
+
+    this.fs.copy(
+      this.templatePath('src/app/home/home.less'),
+      this.destinationPath('src/app/home/home.less')
     );
 
   }
