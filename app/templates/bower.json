@@ -1,6 +1,13 @@
 {
   "name": "<%= projectName %>",
   "version": "0.0.1",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "angular": "1.4.3",
+    "bootstrap": "~3.3",
+    "angular-bootstrap": "~0.13",
+    "angular-ui-router": "~0.2.15"
+  },
+  "resolutions": {
+    "angular": "1.4.3"
+  }
 }

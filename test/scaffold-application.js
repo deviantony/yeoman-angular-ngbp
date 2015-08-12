@@ -23,11 +23,11 @@ describe('AngularJS project generation', function () {
       '.gitignore',
       '.bowerrc',
       'bower.json',
+      'src/README.md',
       'src/app/README.md',
       'src/assets/README.md',
       'src/common/README.md',
       'src/less/README.md',
-      'src/README.md'
     ]);
   });
 
