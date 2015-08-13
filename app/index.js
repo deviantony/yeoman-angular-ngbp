@@ -131,6 +131,11 @@ module.exports = generators.Base.extend({
       this.destinationPath('src/app/home/home.less')
     );
 
+    this.fs.copy(
+      this.templatePath('karma/karma-unit.tpl.js'),
+      this.destinationPath('karma/karma-unit.tpl.js')
+    );
+
   }
 
 });

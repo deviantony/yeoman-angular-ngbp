@@ -36,6 +36,7 @@ describe('AngularJS project generation', function () {
       'src/app/home/home.less',
       'src/app/home/home.tpl.html',
       'src/app/home/README.md',
+      'karma/karma-unit.tpl.js'
     ]);
   });
 
