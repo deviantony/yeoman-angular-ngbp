@@ -60,6 +60,18 @@ module.exports = generators.Base.extend({
     );
 
     this.fs.copyTpl(
+      this.templatePath('src/app/app.js'),
+      this.destinationPath('src/app/app.js'),
+      context
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('src/app/app.spec.js'),
+      this.destinationPath('src/app/app.spec.js'),
+      context
+    );
+
+    this.fs.copyTpl(
       this.templatePath('src/app/README.md'),
       this.destinationPath('src/app/README.md'),
       context

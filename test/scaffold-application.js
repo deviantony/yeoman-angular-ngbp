@@ -25,6 +25,8 @@ describe('AngularJS project generation', function () {
       'bower.json',
       'src/index.html',
       'src/README.md',
+      'src/app/app.js',
+      'src/app/app.spec.js',
       'src/app/README.md',
       'src/assets/README.md',
       'src/common/README.md',
@@ -51,6 +53,18 @@ describe('AngularJS project generation', function () {
 
   it('fills src/index.html with correct information', function () {
     assert.fileContent('src/index.html', new RegExp('ng-app="' + this.projectName + '"'));
+  });
+
+  it('fills src/app/app.js with correct information', function () {
+    var content = [
+      ['src/app/app.js', new RegExp('angular.module\\\("' + this.projectName + '",')],
+      ['src/app/app.js', new RegExp(this.projectName + '.home')]
+    ];
+    assert.fileContent(content);
+  });
+
+  it('fills src/app.spec.js with correct information', function () {
+    assert.fileContent('src/app/app.spec.js', new RegExp('beforeEach\\\(module\\\("' + this.projectName + '"\\\)\\\);'));
   });
 
 });
