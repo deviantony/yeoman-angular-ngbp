@@ -48,14 +48,20 @@ module.exports = generators.Base.extend({
     );
 
     this.fs.copyTpl(
-      this.templatePath('src/app/README.md'),
-      this.destinationPath('src/app/README.md'),
+      this.templatePath('src/index.html'),
+      this.destinationPath('src/index.html'),
       context
     );
 
     this.fs.copyTpl(
       this.templatePath('src/README.md'),
       this.destinationPath('src/README.md'),
+      context
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('src/app/README.md'),
+      this.destinationPath('src/app/README.md'),
       context
     );
 

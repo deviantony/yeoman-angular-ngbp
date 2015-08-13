@@ -23,6 +23,7 @@ describe('AngularJS project generation', function () {
       '.gitignore',
       '.bowerrc',
       'bower.json',
+      'src/index.html',
       'src/README.md',
       'src/app/README.md',
       'src/assets/README.md',
@@ -46,6 +47,10 @@ describe('AngularJS project generation', function () {
 
   it('fills bower.json with correct information', function () {
     assert.fileContent('bower.json', new RegExp('"name": "' + this.projectName + '"'));
+  });
+
+  it('fills src/index.html with correct information', function () {
+    assert.fileContent('src/index.html', new RegExp('ng-app="' + this.projectName + '"'));
   });
 
 });
