@@ -23,6 +23,8 @@ describe('AngularJS project generation', function () {
       '.gitignore',
       '.bowerrc',
       'bower.json',
+      'build-config.js',
+      'Gruntfile.js',
       'src/index.html',
       'src/README.md',
       'src/app/app.js',

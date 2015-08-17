@@ -132,6 +132,16 @@ module.exports = generators.Base.extend({
     );
 
     this.fs.copy(
+      this.templatePath('build-config.js'),
+      this.destinationPath('build-config.js')
+    );
+
+    this.fs.copy(
+      this.templatePath('Gruntfile.js'),
+      this.destinationPath('Gruntfile.js')
+    );
+
+    this.fs.copy(
       this.templatePath('karma/karma-unit.tpl.js'),
       this.destinationPath('karma/karma-unit.tpl.js')
     );
