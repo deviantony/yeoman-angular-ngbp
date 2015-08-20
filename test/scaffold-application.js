@@ -69,5 +69,24 @@ describe('AngularJS project generation', function () {
   it('fills src/app.spec.js with correct information', function () {
     assert.fileContent('src/app/app.spec.js', new RegExp('beforeEach\\\(module\\\("' + this.projectName + '"\\\)\\\);'));
   });
+});
 
+describe('AngularJS project generation with Restangular support', function () {
+  beforeEach(function (done) {
+    this.answers = {
+      "author": "testAuthor"
+    };
+
+    helpers.run(path.join(__dirname, '../app'))
+      .withArguments(['testRestangularProject'])
+      .withOptions({restangular: true})
+      .withPrompts(this.answers)
+      .on('end', done);
+    this.projectName = _.camelCase('testRestangularProject');
+    this.author = "testAuthor";
+  });
+
+  it('adds Restangular package to bower.json', function () {
+    assert.fileContent('bower.json', new RegExp('"restangular": "'));
+  });
 });

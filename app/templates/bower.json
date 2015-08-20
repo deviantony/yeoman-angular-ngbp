@@ -6,7 +6,8 @@
     "angular-mocks": "1.4.3",
     "bootstrap": "~3.3",
     "angular-bootstrap": "~0.13",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15"<% if (restangularSupport) { %>,
+    "restangular": "^1.5.1"<% } %>
   },
   "resolutions": {
     "angular": "1.4.3"

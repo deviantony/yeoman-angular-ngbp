@@ -9,6 +9,12 @@ module.exports = generators.Base.extend({
     this.argument('projectName', { type: String, required: false });
     this.projectName = this.projectName || path.basename(process.cwd());
     this.projectName = _.camelCase(this.projectName);
+    this.option('restangular', {
+      desc     : 'Enable restangular support.',
+      alias    : 'r',
+      type     : 'Boolean',
+      defaults : false,
+    });
   },
 
   prompting: function () {
@@ -32,7 +38,8 @@ module.exports = generators.Base.extend({
   generation: function() {
     context = {
       projectName: this.projectName,
-      author: this.author
+      author: this.author,
+      restangularSupport: this.options.restangular,
     }
 
     this.fs.copyTpl(
@@ -145,7 +152,5 @@ module.exports = generators.Base.extend({
       this.templatePath('karma/karma-unit.tpl.js'),
       this.destinationPath('karma/karma-unit.tpl.js')
     );
-
   }
-
 });
