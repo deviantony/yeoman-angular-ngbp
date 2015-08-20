@@ -6,8 +6,8 @@ module.exports = generators.Base.extend({
 
   constructor: function () {
     generators.Base.apply(this, arguments);
-    this.argument('projectName', { type: String, required: false });
-    this.projectName = this.projectName || path.basename(process.cwd());
+    this.argument('appName', { type: String, required: false });
+    this.projectName = this.appName || path.basename(process.cwd());
     this.projectName = _.camelCase(this.projectName);
     this.option('restangular', {
       desc     : 'Enable restangular support.',
