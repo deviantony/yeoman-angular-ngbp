@@ -8,6 +8,7 @@ var _ = require('lodash');
 var packageDescriptor = {
   'name' : 'testModule',
 }
+
 var moduleName = 'testModule';
 var projectName = _.camelCase('testProject');
 
@@ -32,7 +33,4 @@ describe('AngularJS project module generation', function () {
       'src/app/' + moduleName + '/' + moduleName + '.tpl.html'
     ]);
   });
-
-
-
 });
